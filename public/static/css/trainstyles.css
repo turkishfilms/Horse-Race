@@ -1,0 +1,162 @@
+@font-face { font-family: Delicious; src: url('fonts/PixelCowboy-l7we.ttf'); } 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Delicious;
+    background-color: skyblue;
+    font-size: 12px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+audio{
+    position: fixed;
+    top: 10px;
+    left: 5px;
+    width:120px;
+    height: 15px;
+    border: gold 1px outset;
+    border-radius: 10px;
+}
+
+h1{
+    text-decoration: underline;
+    font-size: 300%;
+    height: 10vh;
+    color: Black;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+form {
+    display: inline;
+}
+
+button {
+    font-family: Delicious;
+}
+
+#currentStats{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    font-family: Delicious;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 30vh;
+    text-align: center;
+}
+
+#currentStats > p {
+    width: 50%;
+    padding: 20px;
+    font-size: 140%;
+}
+
+#trainOptions {
+    height: 10vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+#trainOptions > button {
+    width: 150px;
+    font-size: 200%;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+#trainedHistory {
+    height: 35vh;
+    max-height: 35vh;
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+    border-top: 5px solid black;
+    border-bottom: solid black 5px;
+    background-image: url("../../assets/graphics/bg_hay.png");
+  
+}
+
+
+#readyUp {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    height: 15vh;
+    width: 100%;
+    font-size: 400%;
+    background-color: rgb(207, 167, 33);
+    cursor: pointer;
+}
+
+#readyUp:hover {
+    background-color: rgb(145, 106, 34);
+}
+
+#profilePic {
+    position: fixed;
+    transform-origin: top left;
+    left: 0px;
+    top: 25%;
+    height: auto;
+    scale: 200%;
+}
+
+#profilePic2 {
+    position: fixed;
+    left:0px;
+    top: 25%;
+    height:128px;
+    width:128px;
+}
+
+
+#shotgun {
+    position: fixed;
+    right: 64px;
+    top: 25%;
+    height: auto;
+    scale: 200%;
+    cursor: pointer;
+
+}
+
+#shotgun:hover {
+    filter: drop-shadow(2px 2px 0px rgb(190, 222, 235))
+            drop-shadow(-2px -2px 0px rgb(190, 222, 235))
+            drop-shadow(-2px 2px 0px rgb(190, 222, 235))
+            drop-shadow(2px -2px 0px rgb(190, 222, 235));
+}
+
+@keyframes bulletShoot {
+    from {right: 128px; top: 28%;}
+    to {right: 105%; top: 28%;} 
+  }
+
+  #bullet {
+    position: fixed;
+    width: 10px;
+    height: 6px;
+    top: -25%;
+    background-color: black;
+    animation-name: bulletShoot;
+    animation-duration: 0.4s;
+    transform-origin: center;
+  }
+

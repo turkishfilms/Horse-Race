@@ -1,0 +1,92 @@
+@font-face { font-family: Delicious; src: url('fonts/PixelCowboy-l7we.ttf'); } 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: gold;
+    padding: 20px;
+    font-family: Delicious;
+    background-image: url("../../assets/graphics/bg_hay.png");
+    height: 100vh;
+    /* overflow: hidden; */
+    text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* This aligns the children in the center */
+}
+
+form > input{
+    width: 100%;
+}
+
+#name{
+    text-align: center;
+    font-size: 300%;
+    font-family: Impact;
+    margin-bottom: 5px;
+}
+
+#colorChooser {
+    width: 100%;
+    height: 15px;
+}
+
+#horseHead {
+    border: solid black 3px;
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+#submit{
+    background-color: red;
+    padding: 15px 32px;
+    font-size: 150%;
+    font-family: Delicious;
+    font-weight: bold;
+    height: 80px;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: greenyellow;
+}
+
+@media (max-width: 800px) {
+    video {
+        width: 85vw;
+    }
+}
+
+video {
+    border: groove black 20px;
+}
+
+h1, h2{
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+    border: groove darkolivegreen 5px;
+}
+
+h1 {
+    margin-top: 1px;
+}
+
+#name::placeholder {
+    color: lightgrey;
+}
+
+

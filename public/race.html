@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/racestyles.css" />
+    <link rel="icon" href="assets/graphics/horse/s_horseRunG1.png">
+    <link rel="icon" href="assets/graphics/horse/s_horseRunG2.png">
+    <link rel="icon" href="assets/graphics/horse/s_horseRunG3.png">
+    <link rel="icon" href="assets/graphics/horse/s_horse.png">
+    <script src="/static/js/scripts/socket.io.min.js"></script>
+
+    <script src="/static/js/scripts/p5.min.js"></script>
+    <title>The Race</title>
+  </head>
+
+  <body>
+    <div id="heading">
+      <h1>The Race</h1>
+    </div>
+
+    <div id="raceCanvas" style="width: 1024px; height: 400px"></div>
+
+    <div id="data">
+      <h2>Stats:</h2>
+      <p id="horsename">Name: HorseMan</p>
+      <p id="placement">Place: Soo Fast</p>
+      <p id="speed">Speed: 100 MPH</p>
+    </div>
+    <script type="module" src="./static/js/race.js"></script>
+  </body>
+</html>

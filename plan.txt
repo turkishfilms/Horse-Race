@@ -1,0 +1,197 @@
+"IDEA 1: Horse Racing WebApp"
+
+BUGS & STUFF
+-----------------
+INTRO:
+ - horse head is greyscale, and only becomes colored on slider input. should just be colored right away
+ - horse head canvas background is white, should be clear so we can style it with css
+TRAINING:
+ - your horse's name counts up as if you were a duplicate when you go back and forth between intro and training
+ - the big horse head across from the shotgun should be colored like your horse as well
+ - the ready up icons don't reset(stay colored) if you go back to the training page
+RACE END:
+ - the "play again" button should return you to the training page. not the intro. So you can keep training the same horse
+ - horse head should be colored like your horse
+OTHERS:
+ - at one point, the game thought I had 2 clients open. there was a ghost horse with a previous name that I couldn't get to go away. I haven't been able to repeat
+-----------------
+
+
+WISHLIST
+trianing page for Horses    see stats and feed horses to grow xp, 
+training page is minigames to increase stats
+
+race page
+all the horses start on the left, run to the right, speed is determined by stats and luck
+
+winner goes to winning page
+loser goes to you know
+
+stats:
+Speed: base movement
+Balance: likliehood of stalling
+
+
+
+---WORK SECTION---
+
+REGINALD
+(Backend)
+TODO;
+- add comments 
+- add error handling
+- make all code solid
+- TIDY all code
+- Client keys map to an array of horses not just one horse
+- robustify lol
+- bug hunt
+- Refine README
+
+- Horse Race Progress (nvm) 
+TODONE:
++ Ready up lobby should have bw horse head with name below it, when that user readies up the horse head turns into the color of their horse
++ fix Tripping speed glitch thing (less is more)
++ endscreen MVP
++ Number of ready clients displayed to user on train page
++ only send clients the info they need ( pos and color data), maybe color data on race start and then client saves it, interface segregation principle
++ make horses rgb dependant
++ Show endscreen?
++ add color options for horses
++ add placements 1st 2nd 3rd
++ End race Banner
++ Make any page visitable without error, maybe a spectator flag.
++ Only can call frame or get horse name if your clientkey is in the server, so maybe a isRacer message, which returns a bool which lets you do stuff, else its basic.
++ Horse racing code
++ Clients only need horse data  
++ Name of horse above horse
++ Clients horses y value correct
++ Make Canvas --weird p5 mode
++ Bring in horses from server 
++ Add horses to Canvas
++ Run a frame of the race
++ ##Server client communication
++ give name of horse to server 
++ retrieve correct name from server
++ send stats and name to server
++ send ready status to server
++ send start race signal to all clients simultaneously
++ send current race data each frame to client
++ send horse to client based on client identifier -- clients[clientKey]
++ create client id  --- socket.handshake.session.id
++ store client id with horse data {clKey: {horse:Horse, ready:Bool, Physics:{}}}
++ server express done fam lightwork
++ server needs to hold horses
++ README
+
+
+TABOR 
+(Front-end webdesign. Design classic 2000's feel)
+
+TODO;
+- Winner Page
+- Loser Page
+- Horses grayscale
+- Color pick
+- Progress Bars
+
+TODDONE:
++ Home page (index.html) 
++ Introduction video 
++ Name Submission
++ Borders
++ Backgrounds
++ Styling
++ Fonts
++ Training page 
++ Stats list
++ Horse training
++ History of past trainings posted.
++ Borders
++ Backgrounds
++ Styling
++ Fonts
++ Ready button to start race at bottom.
++ Bullet Div
++ Racing page
++ Title
++ Stats divs
+
+
+SALEM
+(Art Production and Composer)
+TODO;
+- End Screen Music
+
+TODONE: 
++ Favicon
++ Still Horse
++ Running Horse
++ RGB Still Horse
++ RGB Running Horse
++ Dead Horse Head
++ Not Dead Horse Head
++ Shotgun
++ Mountains
++ Trees
++ Bushes
++ Road
++ Hay Background
++ Training Music
++ Race Music
+
+
+TEAM:
+TODO;
+-tweak and decide on stats, training speed etc
+-We need to add gambling or crypto into it somehow lol even if its in a silly way.
+-NFT HORSES??
+TODONE:
++ General stats
++ Training
+
+
+
+General Stats:
+    Weight: weight of horse; Effects Max Speed(+), Balance(-) and Acceleration(-)
+
+    Speed: current speed
+
+    Max speed: Max possible movement in one step. heavier horse = higher max speed. 
+
+    acceleration: rate of speed increase. heavier horse = slower. 
+
+    balance: chance of slipping per step. slipping means no movement (speed = 0 that turn). 
+
+    place: horses current position in the race (first, second, third, etc)
+
+
+Training:
+
+    feed: increases weight (max speed). decreases acceleration.
+
+    walk: increases balance, lowers weight
+
+    rest: descreases weight, decreases balance
+
+
+natural selection ideas:
+
+    earn points from winning to spend on training.
+
+    if horse weight gets too low (lose weight from losing race or training)
+    then it dies and is deleted. 
+
+    if horse reaches certain weight (max stat) and wins
+    5 races in row it is put into hall of fame and retired
+
+
+    or its more a .reduce like idea where uou keep playing
+    until only one horse alive (collects all the other players stats)
+    by winning and spending well while others slowly get drained
+    then once you win your horse is put into hall of fame
+MVP COMPLETED
+
+
+
+
+http://127.0.0.1:3007/

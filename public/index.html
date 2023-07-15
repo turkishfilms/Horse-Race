@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome To The Horse Races</title>
+    <link rel="stylesheet" type="text/css" href="static/css/introstyles.css" />
+    <link rel="icon" href="assets/graphics/s_horseHeadGS.png"/>
+    <link rel="icon" href="assets/graphics/horse/s_horse.png" />
+    <script src="/static/js/scripts/socket.io.min.js"></script>
+    <script src="/static/js/scripts/p5.min.js"></script>
+  </head>
+
+  <body>
+    <script src="static/js/index.js"></script>
+    <h1>Welcome To The Horse Races</h1>
+
+    <video controls>
+      <source src="assets/intro.mp4" type="video/mp4" />
+      Your browser does not support the epic video unfortunately.
+    </video>
+
+    <h2>Choose a Name and Color For Your Horse:</h2>
+
+    <form onsubmit="submitForm(event)">
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        minlength="3"
+        maxlength="20"
+        size="14"
+        placeholder="Enter name..."
+        autofocus
+      />
+
+      <div>
+        <input
+          type="range"
+          id="colorChooser"
+          min="0"
+          max="360"
+          step="any"
+          value="0" 
+        />
+      </div>
+
+      <div id="horseHead" style="width: 128px; height: 128px;">
+      </div>
+      <input 
+        type="submit" 
+        id="submit" 
+        value="Start Your Racing Adventure"
+        />
+      </form>
+  </body>
+</html>

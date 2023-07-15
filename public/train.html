@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="static/css/trainstyles.css" />
+    <link rel="icon" href="assets/graphics/horse/s_horseG.png" />
+    <script src="/static/js/scripts/socket.io.min.js"></script>
+    <script src="/static/js/scripts/p5.min.js"></script>
+
+    <title>Train Your Horse</title>
+  </head>
+  <body>
+    <h1 id="trainTitle">Train</h1>
+
+    <img id="profilePic" src="assets/graphics/s_horseHeadGS.png">
+    <div id="profilePic2"></div>
+
+    <img id="shotgun" src="assets/graphics/s_shotgun.png">
+
+    <div id="statsGUI">
+      <div id="currentStats">
+        <p id="maxSpeed">Max Speed:</p>
+        <p id="weight">Weight:</p>
+        <p id="acceleration">Acceleration:</p>
+        <p id="balance">Balance:</p>
+      </div>
+
+      <div id="trainOptions"></div>
+    </div>
+    <div id="clientsBar" style="width:100%;height:120px"></div>
+
+    <div id="trainedHistory"></div>
+
+    <button id="readyUp" onclick="readiedUp()">READY</button>
+
+    <audio autoplay controls loop>
+      <source src="assets/audio/msc_stableTheme.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script src="static/js/train.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garbage Man</title>
+    <link rel="stylesheet" type="text/css" href="static/css/introstyles.css" />
+    <link rel="icon" href="assets/graphics/s_horseHead.png"/>
+    <link rel="icon" href="assets/graphics/horse/s_horse.png" />
+    <script src="/static/js/scripts/socket.io.min.js"></script>
+    <script src="/static/js/scripts/p5.min.js"></script>
+  </head>
+<body>
+  <h1 id="winLossMessage"> You won!</h1>
+  <div id="image">
+  <img id="finalImage" style="height: 250px" src="assets/graphics/s_horseHead.png" />
+  </div>
+  <div id="podium"></div>
+  <a href="/" style="color:blue;" onclick="socket.emit('startOver')"><button id="submit">Play again</button></a>
+    <script src="static/js/final.js"></script>
+</body>
+</html>
